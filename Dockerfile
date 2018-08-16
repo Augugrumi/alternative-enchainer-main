@@ -17,7 +17,7 @@ RUN mvn package && \
     mv target/alternative-vnflauncher-1.0-SNAPSHOT-jar-with-dependencies.jar /vnflauncher.jar
 
 
-FROM java:8
+FROM openjdk:8-jre-alpine
 ENV PORT=8080
 ENV LINKS=http://localhost
 WORKDIR /
